@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regex in JavaScript</title>
+</head>
+<body>
+
+<h2>Regex in JavaScript</h2>
+
+<p>Regular expressions are used in programming languages to match strings. You create patterns to help you do that matching.</p>
+<p>.test() method takes the regex and applies it to the string(which is placed inside the parantheses), and returns true or false if your pattern finds something or not.</p>
+<p>You can extract matches with the .match() method. Apply the method on a string and pass in the regex inside the parantheses</p>
+<p>You can search for multiple patters using the alternation or OR operator: |</p>
+<p>To ignore case use the i flag /regexhere/i</p>
+<p>To search or extract a pattern more than once, use the g flag.</p>
+<p>The wildcard character . will match any one character. It is also called dot and period.</p>
+<p>Character classes can be placed inside []. They allow you to define a group of characters you wish to match. Specify a range of characters using the hyphen - . Eg. /[a-z0-9]/ig;</p>
+<p>Negated character sets. To create these, place a caret (^) after the opening bracket and before the characters you do not want to match.</p>
+<p>To match a character that occurs once or more in a row, use the plus (+) character. This means that it occurs atleast once and may be repeated. The character or pattern has to be present consecutively.</p>
+<p>To match a character that occurs zero or more times, use the asterisk (*) character.</p>
+<p>greedy match v/s lazy match. Regex are by default greedy. Use the character ? to change it to lazy matching.</p>
+
+</body>
+</html>
