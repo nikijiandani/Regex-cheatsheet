@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Regex in JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
@@ -16,9 +17,25 @@
 <p>The wildcard character . will match any one character. It is also called dot and period.</p>
 <p>Character classes can be placed inside []. They allow you to define a group of characters you wish to match. Specify a range of characters using the hyphen - . Eg. /[a-z0-9]/ig;</p>
 <p>Negated character sets. To create these, place a caret (^) after the opening bracket and before the characters you do not want to match.</p>
+<p>Outside of a character set, the caret(^) is used to search for patterns at the beginning of strings and the dollar sign ($) at the end of the regex to search for patterns at the end of strings.</p>
 <p>To match a character that occurs once or more in a row, use the plus (+) character. This means that it occurs atleast once and may be repeated. The character or pattern has to be present consecutively.</p>
 <p>To match a character that occurs zero or more times, use the asterisk (*) character.</p>
 <p>greedy match v/s lazy match. Regex are by default greedy. Use the character ? to change it to lazy matching.</p>
+<p>Shorthand character classes: Use \w to match [A-Za-z0-9_]. This character class matches upper and lower case letters plus numbers and also includes the underscore character. To match everything but letters and numbers, use \W to match [^A-Za-z0-9_].
+Shortcut to look for digit characters is \d which is equal to [0-9]. \D is equal to [^0-9]. Use shortcut \s to search for whitespace and \S to search for everything except whitespace.</p>
+<p>Quantity specifiers: ({ }) You put two numbers between the curly brackets for the lower and upper number of patterns. These can be used with other shortcuts</p>
+<h4>Common flags</h4>
+<ul>
+	<li>i : case insensitive</li>
+	<li>g : global (doesn't stop after first match)</li>
+	<li>m : multi-line</li>
+</ul>
+<h4>Common Anchors</h4>
+<ul>
+	<li>^ : start of string</li>
+	<li>$ : end of string</li>
+	<li></li>
+</ul>
 
 </body>
 </html>
