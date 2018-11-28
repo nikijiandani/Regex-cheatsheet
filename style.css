@@ -2,3 +2,12 @@ h2 {
 	background: #EEEEEE;
 	text-align: center;
 }
+span {
+	color:#CD486D;
+	background: #EEEEEE;
+}
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}

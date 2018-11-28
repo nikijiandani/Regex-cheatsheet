@@ -9,33 +9,92 @@
 <h2>Regex in JavaScript</h2>
 
 <p>Regular expressions are used in programming languages to match strings. You create patterns to help you do that matching.</p>
-<p>.test() method takes the regex and applies it to the string(which is placed inside the parantheses), and returns true or false if your pattern finds something or not.</p>
-<p>You can extract matches with the .match() method. Apply the method on a string and pass in the regex inside the parantheses</p>
-<p>You can search for multiple patters using the alternation or OR operator: |</p>
-<p>To ignore case use the i flag /regexhere/i</p>
-<p>To search or extract a pattern more than once, use the g flag.</p>
-<p>The wildcard character . will match any one character. It is also called dot and period.</p>
+<p><span>.test()</span> method takes the regex and applies it to the string(which is placed inside the parantheses), and returns true or false if your pattern finds something or not.</p>
+<p>You can extract matches with the <span>.match()</span> method. Apply the method on a string and pass in the regex inside the parantheses</p>
+<p>You can search for multiple patters using the <span>alternation or OR operator: |</span></p>
+<p>To ignore case use the <span>i flag /regexhere/i</span></p>
+<p>To search or extract a pattern more than once, use the <span>g flag</span>.</p>
+<p>The <span>wildcard character .</span> will match any one character. It is also called dot and period.</p>
 <p>Character classes can be placed inside []. They allow you to define a group of characters you wish to match. Specify a range of characters using the hyphen - . Eg. /[a-z0-9]/ig;</p>
-<p>Negated character sets. To create these, place a caret (^) after the opening bracket and before the characters you do not want to match.</p>
-<p>Outside of a character set, the caret(^) is used to search for patterns at the beginning of strings and the dollar sign ($) at the end of the regex to search for patterns at the end of strings.</p>
-<p>To match a character that occurs once or more in a row, use the plus (+) character. This means that it occurs atleast once and may be repeated. The character or pattern has to be present consecutively.</p>
-<p>To match a character that occurs zero or more times, use the asterisk (*) character.</p>
-<p>greedy match v/s lazy match. Regex are by default greedy. Use the character ? to change it to lazy matching.</p>
-<p>Shorthand character classes: Use \w to match [A-Za-z0-9_]. This character class matches upper and lower case letters plus numbers and also includes the underscore character. To match everything but letters and numbers, use \W to match [^A-Za-z0-9_].
-Shortcut to look for digit characters is \d which is equal to [0-9]. \D is equal to [^0-9]. Use shortcut \s to search for whitespace and \S to search for everything except whitespace.</p>
-<p>Quantity specifiers: ({ }) You put two numbers between the curly brackets for the lower and upper number of patterns. These can be used with other shortcuts</p>
-<h4>Common flags</h4>
-<ul>
-	<li>i : case insensitive</li>
-	<li>g : global (doesn't stop after first match)</li>
-	<li>m : multi-line</li>
-</ul>
-<h4>Common Anchors</h4>
-<ul>
-	<li>^ : start of string</li>
-	<li>$ : end of string</li>
-	<li></li>
-</ul>
+<p>Negated character sets. To create these, place a <span>caret (^)</span> after the opening bracket and before the characters you do not want to match.</p>
+<p>Outside of a character set, the <span>caret(^)</span> is used to search for patterns at the beginning of strings and the <span>dollar sign ($)</span> at the end of the regex to search for patterns at the end of strings.</p>
+<p>To match a character that occurs once or more in a row, use the <span>plus (+)</span> character. This means that it occurs atleast once and may be repeated. The character or pattern has to be present consecutively.</p>
+<p>To match a character that occurs zero or more times, use the <span>asterisk (*)</span> character.</p>
+<p>greedy match v/s lazy match. <span>Regex are by default greedy</span>. Use the character <span>?</span> to change it to lazy matching.</p>
+<p>Shorthand character classes: Use <span>\w</span> to match [A-Za-z0-9_]. This character class matches upper and lower case letters plus numbers and also includes the underscore character. To match everything but letters and numbers, use <span>\W</span> to match [^A-Za-z0-9_].
+Shortcut to look for digit characters is <span>\d</span> which is equal to [0-9]. <span>\D</span> is equal to [^0-9]. Use shortcut <span>\s</span> to search for whitespace and <span>\S</span> to search for everything except whitespace.</p>
+<p><span>Quantity specifiers: ({ })</span> You put two numbers between the curly brackets for the lower and upper number of patterns. These can be used with other shortcuts</p>
+<div class="container">
+	<div>
+		<h4>Common flags</h4>
+		<ul>
+			<li>i : case insensitive</li>
+			<li>g : global (doesn't stop after first match)</li>
+			<li>m : multi-line</li>
+		</ul>
+	</div>
+	<div>
+		<h4>Common Anchors</h4>
+		<ul>
+			<li>^ : start of string</li>
+			<li>$ : end of string</li>
+			<li>\A : Start of string (not affected by multi-line content)</li>
+			<li>\Z : End of string (not affected by multi-line content)</li>
+		</ul>
+	</div>
+	<div>
+		<h4>Most common quantifiers</h4>
+		<ul>
+			<li>{n} : Exactly n times</li>
+			<li>{n,} : At least n times</li>
+			<li>{m,n} : Between m and n times</li>
+			<li>? : Zero or one time</li>
+			<li>+ : One or more times</li>
+			<li>* : Zero, one or more times</li>
+		</ul>
+	</div>
+	<div>
+		<h4>Most common meta sequences</h4>
+		<ul>
+			<li>. : Any character but \n and \r </li>
+			<li>\w | \W : Any word character | Any non-word character</li>
+			<li>\d | \D : Any digit character | Any non-digit character</li>
+			<li>\s | \S : Any whitespace character | Any non-whitespace character</li>
+		</ul>
+	</div>
+	<div>
+		<h4>Character sets</h4>
+		<ul>
+			<li>[abc] : Will match either a, b or c</li>
+			<li>[1-9] : Will match any digit from 1 to 9</li>
+			<li>[a-zA-Z] : Will match any letter</li>
+		</ul>
+	</div>
+	<div>
+		<h4>Match any character but</h4>
+		<ul>
+			<li>[^abc] : Matches anything but a, b or c</li>
+		</ul>
+	</div>
+	<div>
+		<h4>Escape a character</h4>
+		<ul>
+			<li>\character (example : escaping + => \+)</li>
+		</ul>
+	</div>
+	<div>
+		<h4>Refer to a group (also used for capturing groups, look further):</h4>
+		<ul>
+			<li>(group of characters) (example : /(he)+/ will match 'hehehe'</li>
+		</ul>
+	</div>
+	<div>
+		<h4>One group or another</h4>
+		<ul>
+			<li>| : /^h((ello)|(ola))$/ will match both 'hello' and 'hola'</li>
+		</ul>
+	</div>
+</div>
 
 </body>
 </html>
