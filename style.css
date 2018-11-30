@@ -7,7 +7,17 @@ span {
 	background: #EEEEEE;
 }
 .container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.block {
+	border: 2px solid #2F6719;
+	border-radius: 5px;
+	margin: auto;
+	padding: 5px;
+}
+@media (max-width: 600px) {
+	.container {
+		grid-template-columns: 1fr;
+	}
 }

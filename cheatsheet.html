@@ -25,7 +25,7 @@
 Shortcut to look for digit characters is <span>\d</span> which is equal to [0-9]. <span>\D</span> is equal to [^0-9]. Use shortcut <span>\s</span> to search for whitespace and <span>\S</span> to search for everything except whitespace.</p>
 <p><span>Quantity specifiers: ({ })</span> You put two numbers between the curly brackets for the lower and upper number of patterns. These can be used with other shortcuts</p>
 <div class="container">
-	<div>
+	<div class="block">
 		<h4>Common flags</h4>
 		<ul>
 			<li>i : case insensitive</li>
@@ -33,7 +33,7 @@ Shortcut to look for digit characters is <span>\d</span> which is equal to [0-9]
 			<li>m : multi-line</li>
 		</ul>
 	</div>
-	<div>
+	<div class="block">
 		<h4>Common Anchors</h4>
 		<ul>
 			<li>^ : start of string</li>
@@ -42,7 +42,7 @@ Shortcut to look for digit characters is <span>\d</span> which is equal to [0-9]
 			<li>\Z : End of string (not affected by multi-line content)</li>
 		</ul>
 	</div>
-	<div>
+	<div class="block">
 		<h4>Most common quantifiers</h4>
 		<ul>
 			<li>{n} : Exactly n times</li>
@@ -53,7 +53,7 @@ Shortcut to look for digit characters is <span>\d</span> which is equal to [0-9]
 			<li>* : Zero, one or more times</li>
 		</ul>
 	</div>
-	<div>
+	<div class="block">
 		<h4>Most common meta sequences</h4>
 		<ul>
 			<li>. : Any character but \n and \r </li>
@@ -62,7 +62,7 @@ Shortcut to look for digit characters is <span>\d</span> which is equal to [0-9]
 			<li>\s | \S : Any whitespace character | Any non-whitespace character</li>
 		</ul>
 	</div>
-	<div>
+	<div class="block">
 		<h4>Character sets</h4>
 		<ul>
 			<li>[abc] : Will match either a, b or c</li>
@@ -70,25 +70,25 @@ Shortcut to look for digit characters is <span>\d</span> which is equal to [0-9]
 			<li>[a-zA-Z] : Will match any letter</li>
 		</ul>
 	</div>
-	<div>
+	<div class="block">
 		<h4>Match any character but</h4>
 		<ul>
 			<li>[^abc] : Matches anything but a, b or c</li>
 		</ul>
 	</div>
-	<div>
+	<div class="block">
 		<h4>Escape a character</h4>
 		<ul>
 			<li>\character (example : escaping + => \+)</li>
 		</ul>
 	</div>
-	<div>
+	<div class="block">
 		<h4>Refer to a group (also used for capturing groups, look further):</h4>
 		<ul>
 			<li>(group of characters) (example : /(he)+/ will match 'hehehe'</li>
 		</ul>
 	</div>
-	<div>
+	<div class="block">
 		<h4>One group or another</h4>
 		<ul>
 			<li>| : /^h((ello)|(ola))$/ will match both 'hello' and 'hola'</li>
