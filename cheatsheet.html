@@ -15,7 +15,7 @@
 <p>To ignore case use the <span>i flag /regexhere/i</span></p>
 <p>To search or extract a pattern more than once, use the <span>g flag</span>.</p>
 <p>The <span>wildcard character .</span> will match any one character. It is also called dot and period.</p>
-<p>Character classes can be placed inside []. They allow you to define a group of characters you wish to match. Specify a range of characters using the hyphen - . Eg. /[a-z0-9]/ig;</p>
+<p>Character classes can be placed inside <span>[]</span>. They allow you to define a group of characters you wish to match. Specify a range of characters using the <span>hyphen -</span>. Eg. /[a-z0-9]/ig;</p>
 <p>Negated character sets. To create these, place a <span>caret (^)</span> after the opening bracket and before the characters you do not want to match.</p>
 <p>Outside of a character set, the <span>caret(^)</span> is used to search for patterns at the beginning of strings and the <span>dollar sign ($)</span> at the end of the regex to search for patterns at the end of strings.</p>
 <p>To match a character that occurs once or more in a row, use the <span>plus (+)</span> character. This means that it occurs atleast once and may be repeated. The character or pattern has to be present consecutively.</p>
@@ -28,6 +28,7 @@ Shortcut to look for digit characters is <span>\d</span> which is equal to [0-9]
 <p>A <span>positive lookahead</span> will look to make sure the element in the search pattern is there, but wont actually match it. A <span>negative lookahead</span> will look to make sure the element in the search pattern is not there.</p>
 <p>A more practical use of lookaheads is to check two or more patterns in one string.</p>
 <p><span>Capture groups</span> uses parantheses <span>(</span> and <span>)</span> for searching repeat substrings. You put the regex of the pattern that will repeat in between the parentheses. To specify where that repeat string will appear, you use a backslash ( <span>\</span> ) and then a number. This number starts at 1 and increases with each additional capture group you use.</p>
+<p>You can also use capture groups to search and replace using <span>.replace()</span></p>
 <div class="container">
 	<div class="block">
 		<h4>Common flags</h4>
