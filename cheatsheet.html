@@ -24,6 +24,10 @@
 <p>Shorthand character classes: Use <span>\w</span> to match [A-Za-z0-9_]. This character class matches upper and lower case letters plus numbers and also includes the underscore character. To match everything but letters and numbers, use <span>\W</span> to match [^A-Za-z0-9_].
 Shortcut to look for digit characters is <span>\d</span> which is equal to [0-9]. <span>\D</span> is equal to [^0-9]. Use shortcut <span>\s</span> to search for whitespace and <span>\S</span> to search for everything except whitespace.</p>
 <p><span>Quantity specifiers: ({ })</span> You put two numbers between the curly brackets for the lower and upper number of patterns. These can be used with other shortcuts</p>
+<p>Lookaheads: (There are two kinds) <span>positive lookahead (?=...)</span> and <span>negative lookahead (?!...)</span></p>
+<p>A <span>positive lookahead</span> will look to make sure the element in the search pattern is there, but wont actually match it. A <span>negative lookahead</span> will look to make sure the element in the search pattern is not there.</p>
+<p>A more practical use of lookaheads is to check two or more patterns in one string.</p>
+<p><span>Capture groups</span> uses parantheses <span>(</span> and <span>)</span> for searching repeat substrings. You put the regex of the pattern that will repeat in between the parentheses. To specify where that repeat string will appear, you use a backslash ( <span>\</span> ) and then a number. This number starts at 1 and increases with each additional capture group you use.</p>
 <div class="container">
 	<div class="block">
 		<h4>Common flags</h4>
