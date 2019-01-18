@@ -1,3 +1,7 @@
+body {
+	width: 80%;
+	margin: 5vw auto;
+}
 h2 {
 	background: #EEEEEE;
 	text-align: center;
