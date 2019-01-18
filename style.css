@@ -19,8 +19,9 @@ span {
 	border-radius: 5px;
 	margin: auto;
 	padding: 5px;
+	width: 80%;
 }
-@media (max-width: 600px) {
+@media (max-width: 900px) {
 	.container {
 		grid-template-columns: 1fr;
 	}
